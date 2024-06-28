@@ -1,10 +1,11 @@
-//changes made on 28 june - testing purpose
-
 #include <stdio.h>
 #include <assert.h>
 
+#define MAX_TEMP  (45f)
+#define MIN_TEMP  (0f)
+
 int batteryIsOk(float temperature, float soc, float chargeRate) {
-  if(temperature < 0 || temperature > 45) {
+  if(temperature < MIN_TEMP || temperature > MAX_TEMP) {
     printf("Temperature out of range!\n");
     return 0;
   } else if(soc < 20 || soc > 80) {
