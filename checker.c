@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <assert.h>
 
-#define MAX_TEMP  (45f)
-#define MIN_TEMP  (0f)
+const float MAX_TEMP = 45;
+const float MIN_TEMP = 0;
 
 int batteryIsOk(float temperature, float soc, float chargeRate) {
   if(temperature < MIN_TEMP || temperature > MAX_TEMP) {
